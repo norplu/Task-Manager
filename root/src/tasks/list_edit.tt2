@@ -1,0 +1,9 @@
+[% FOREACH task IN tasks -%]
+  <form method="post" action="[% c.uri_for('form_update_do') %]">
+    <input type="text" name="title" value="[% task.title %]">
+    <input type="text" name="description" value="[% task.description %]">
+    <input type="number" name="progress" value="[% task.progress %]">
+    <input type="submit" name="Submit" value="Submit">
+  </form>
+[% END -%]
+

@@ -1,0 +1,34 @@
+[% META title = 'Task List' -%]
+
+<!--
+<form method="post" action="[% c.uri_for('form_create_do') %]">
+  <input type="text" name="title">
+  <input type="text" name="description">
+  <input type="number" name="progress">
+  <input type="submit" name="Submit" value="Submit">
+</form>
+-->
+
+<a href="[% c.uri_for(c.controller.action_for('formfu_create')) %]">
+  Create new task
+</a>
+
+<a href="[% c.uri_for(c.controller.action_for('list_asc')) %]">
+ASC
+</a>
+
+[% #Create a foreach loop to go through tasks -%]
+<ol class="collection">
+  [% FOREACH task IN tasks -%]
+      <li class="collection-item">
+        [% task.title %]<br>
+        [% task.description %]<br>
+        <div data-preset="energy" class="ldBar" data-value="[% task.progress %]">
+        </div><br>
+        <a href="[% c.uri_for(c.controller.action_for('delete'), [task.id]) %]">
+          Delete
+        </a>
+      </li>
+  [% END -%]
+</ol>
+

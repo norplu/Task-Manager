@@ -1,0 +1,26 @@
+---
+# Indicator is the field used to test for form submission
+indicator: submit
+
+# Start listing the form elements
+elements:
+    - type: Text
+      name: title
+      label: Title
+      # Optional mouseover popup
+      attributes:
+          title: Enter a task title here
+
+    - type: Text
+      name: description
+      label: Description
+      attributes:
+          title: Enter a description here
+
+    - type: Number
+      name: progress
+      label: Progress
+
+    - type: Submit
+      name: submit
+      value: Submit
