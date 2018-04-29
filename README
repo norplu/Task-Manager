@@ -1,1 +1,7 @@
-Run script/taskmanager_server.pl to test the application.
+# Task Manager
+
+Simple CRUD app to learn perl and the catalyst framework
+
+## Author
+
+Nora Cook
