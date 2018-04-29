@@ -3,9 +3,12 @@
     <title>[% template.title or 'My Task Manager App' %]</title>
     <link rel="stylesheet" href="[% c.uri_for('/static/css/materialize.css') %]" />
     <link rel="stylesheet" href="[% c.uri_for('/static/css/loading-bar.css') %]" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="[% c.uri_for('/static/js/loading-bar.min.js') %]"></script>
   </head>
   <body>
-    [% content %]
+    <div class="container">
+      [% content %]
+    </div>
   </body>
 </html>

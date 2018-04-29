@@ -1,22 +1,15 @@
 [% META title = 'Task List' -%]
-
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light red"
+     href="[% c.uri_for(c.controller.action_for('formfu_create')) %]">
+    <i class="material-icons">add</i>
+  </a>
+</div>
 <!--
-<form method="post" action="[% c.uri_for('form_create_do') %]">
-  <input type="text" name="title">
-  <input type="text" name="description">
-  <input type="number" name="progress">
-  <input type="submit" name="Submit" value="Submit">
-</form>
--->
-
-<a href="[% c.uri_for(c.controller.action_for('formfu_create')) %]">
-  Create new task
-</a>
-
 <a href="[% c.uri_for(c.controller.action_for('list_asc')) %]">
 ASC
 </a>
-
+-->
 [% #Create a foreach loop to go through tasks -%]
 <ol class="collection">
   [% FOREACH task IN tasks -%]
@@ -24,9 +17,15 @@ ASC
         [% task.title %]<br>
         [% task.description %]<br>
         <div data-preset="energy" class="ldBar" data-value="[% task.progress %]">
-        </div><br>
-        <a href="[% c.uri_for(c.controller.action_for('delete'), [task.id]) %]">
-          Delete
+        </div>
+        <br>
+        <br>
+        <a class="btn-floating waves-effect waves-light red" href="[% c.uri_for(c.controller.action_for('delete'), [task.id]) %]">
+          <i class="material-icons">delete</i>
+        </a>
+        <a class="btn-floating waves-effect waves-light red" href="[% c.uri_for(c.controller.action_for('formfu_edit'),
+                 [task.id]) %]">
+        <i class="material-icons">edit</i>
         </a>
       </li>
   [% END -%]

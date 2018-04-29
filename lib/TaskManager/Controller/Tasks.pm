@@ -152,6 +152,25 @@ sub formfu_edit :Chained('object') :PathPart('formfu_edut') Args(0)
     my ($self, $c) = @_;
 
     my $task = $c->stash->{object};
+
+    unless ($task) {
+        $c->response->redirect($c->uri_for($self->action_for('list')));
+
+        $c->detach;
+    }
+
+    my $form = $c->stash->{form};
+
+    # Check if form has been submitted u
+    if ($form->submitted_and_valid) {
+        $form->model->update($task);
+        $c->response->redirect($c->uri_for($self->action_for('list')));
+        $c->detach;
+    } else {
+        $form->model->default_values($task);
+    }
+
+    $c->stash(template => 'tasks/formfu_create.tt2');
 }
 
 =head2 delete

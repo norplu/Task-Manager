@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+TaskManager	lib/TaskManager.pm	/^package TaskManager;$/;"	p
+TaskManager::Controller::Root	lib/TaskManager/Controller/Root.pm	/^package TaskManager::Controller::Root;$/;"	p
+TaskManager::Controller::Tasks	lib/TaskManager/Controller/Tasks.pm	/^package TaskManager::Controller::Tasks;$/;"	p
+TaskManager::Model::DB	lib/TaskManager/Model/DB.pm	/^package TaskManager::Model::DB;$/;"	p
+TaskManager::Schema	lib/TaskManager/Schema.pm	/^package TaskManager::Schema;$/;"	p
+TaskManager::Schema::Result::Task	lib/TaskManager/Schema/Result/Task.pm	/^package TaskManager::Schema::Result::Task;$/;"	p
+TaskManager::View::HTML	lib/TaskManager/View/HTML.pm	/^package TaskManager::View::HTML;$/;"	p
+base	lib/TaskManager/Controller/Tasks.pm	/^sub base :Chained('\/') :PathPart('tasks') :CaptureArgs(0) {$/;"	s
+default	lib/TaskManager/Controller/Root.pm	/^sub default :Path {$/;"	s
+delete	lib/TaskManager/Controller/Tasks.pm	/^sub delete :Chained('object') :PathPart('delete') :Args(0) {$/;"	s
+end	lib/TaskManager/Controller/Root.pm	/^sub end : ActionClass('RenderView') {}$/;"	s
+form_create_do	lib/TaskManager/Controller/Tasks.pm	/^sub form_create_do :Chained('base') :PathPart('form_create_do') :Args(0) {$/;"	s
+formfu_create	lib/TaskManager/Controller/Tasks.pm	/^sub formfu_create :Chained('base') :PathPart('formfu_create') :Args(0) :FormConfig {$/;"	s
+formfu_edit	lib/TaskManager/Controller/Tasks.pm	/^sub formfu_edit :Chained('object') :PathPart('formfu_edut') Args(0)$/;"	s
+index	lib/TaskManager/Controller/Root.pm	/^sub index :Path :Args(0) {$/;"	s
+index	lib/TaskManager/Controller/Tasks.pm	/^sub index :Path :Args(0) {$/;"	s
+list	lib/TaskManager/Controller/Tasks.pm	/^sub list :Local {$/;"	s
+list_asc	lib/TaskManager/Controller/Tasks.pm	/^sub list_asc :Local {$/;"	s
+object	lib/TaskManager/Controller/Tasks.pm	/^sub object :Chained('base') :PathPart('id') :CaptureArgs(1) {$/;"	s
+task	taskmanager01.sql	/^CREATE TABLE task ($/;"	t
+task.description	taskmanager01.sql	/^    title       TEXT,$/;"	F
+task.id	taskmanager01.sql	/^CREATE TABLE task ($/;"	F
+task.progress	taskmanager01.sql	/^    description TEXT,$/;"	F
+task.title	taskmanager01.sql	/^    id          INTEGER PRIMARY KEY AUTOINCREMENT,$/;"	F
